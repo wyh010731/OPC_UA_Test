@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>工业4.0python通讯测试</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+
+<div style="text-align: center"><!-- 标题 -->
+  <div style="background-color: deepskyblue">
+      <hr>
+        <h1 style="font-size: 25px">Python通讯功能测试</h1>
+      <hr>
+  </div>
+</div>
+
+<!-- 数据读取区 -->
+<div>
+  <div style="color: deepskyblue">
+    <h2>数据读取区</h2>
+    <hr>
+  </div>
+</div>
+
+<!-- 画表格 1 -->
+<div>
+  <table  style="border: 1px;height: 100px;width: 1500px;text-align: center">
+    <tr style="text-align: center;font-size: 40px">
+      <td>变量名</td> <td>读取值</td> <td>读取按钮</td>
+
+      <!-- 表格第二行 -->
+    </tr>
+    <tr style="text-align: center">
+    	<td> <p style="font-size: 20px;font-weight: bold">BL1</p> </td>
+      <td id="dis1">0</td>
+      <td> <button type="button" style="height: 30px;width: 200px" onclick="OPC_Read('1')"> 读取 </button> </td>
+    </tr>
+
+    <!-- 表格第三行 -->
+    <tr style="text-align: center">
+    	<td> <p style="font-size: 20px;font-weight: bold">BL2</p> </td>
+      <td id="dis2"> 0</td>
+      <td> <button type="button" style="height: 30px;width: 200px" onclick="OPC_Read('2')"> 读取 </button> </td>
+    </tr>
+
+    <!-- 表格第四行 -->
+    <tr style="text-align: center">
+    	<td> <p style="font-size: 20px;font-weight: bold">BL3</p> </td>
+      <td id="dis3"> 0</td>
+      <td> <button type="button" style="height: 30px;width: 200px" onclick="OPC_Read('3')"> 读取 </button> </td>
+    </tr>
+
+    <!-- 表格第五行 -->
+    <tr style="text-align: center">
+    	<td> <p style="font-size: 20px;font-weight: bold">BL4</p> </td>
+      <td id="dis4"> 0</td>
+      <td> <button type="button" style="height: 30px;width: 200px" onclick="OPC_Read('4')"> 读取 </button> </td>
+    </tr>
+  </table>
+</div>
+<br><br><br>
+
+<!-- 数据写入区 -->
+<div>
+  <div style="color: deepskyblue">
+    <h2>数据写入区</h2>
+    <hr>
+  </div>
+</div>
+
+<!-- 画表格 2 -->
+<div>
+  <table style="border: 1px;height: 100px;width: 1500px;text-align: center">
+    <tr style="text-align: center;font-size: 40px">
+      <td>变量名</td> <td>读取值</td> <td>写入按钮</td>
+    </tr>
+
+    <!-- 表格第二行 -->
+    <tr style="text-align: center">
+    	<td><p style="font-size: 20px;font-weight: bold">BL1(BOOL型)</p> </td>
+      <td> <input type="search" id="dis5" placeholder="请输入True or False"/> </td>
+      <td> <button type="button" style="height: 30px;width: 200px" onclick="OPC_Write('5',$('#dis5').val())"> 写入 </button> </td>
+    </tr>
+    <!-- 表格第三行 -->
+    <tr style="text-align: center">
+    	<td><p style="font-size: 20px;font-weight: bold">BL2(Int型)</p> </td>
+      <td> <input type="search" id="dis6" placeholder="请输入整数类型数据"/> </td>
+      <td> <button type="button" style="height: 30px;width: 200px" onclick="OPC_Write('6',$('#dis6').val())"> 写入 </button> </td>
+    </tr>
+
+    <!-- 表格第四行 -->
+    <tr style="text-align: center">
+    	<td><p style="font-size: 20px;font-weight: bold">BL3(Float型)</p> </td>
+      <td> <input type="search" id="dis7" placeholder="请输入浮点类型数据"/> </td>
+      <td> <button type="button" style="height: 30px;width: 200px " onclick="OPC_Write('7',$('#dis7').val())"> 写入 </button> </td>
+    </tr>
+
+    <!-- 表格第五行 -->
+    <tr style="text-align: center">
+    	<td><p style="font-size: 20px;font-weight: bold">BL4(String型)</p> </td>
+      <td> <input type="search" id="dis8" placeholder="请输入字符串类型数据"/> </td>
+      <td> <button type="button" style="height: 30px;width: 200px" onclick="OPC_Write('8',$('#dis8').val())">  写入 </button> </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
